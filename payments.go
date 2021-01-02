@@ -41,9 +41,9 @@ type Payment struct {
 	SponsorID                 interface{}        `json:"sponsor_id"`
 	AuthorizationCode         interface{}        `json:"authorization_code"`
 	MoneyReleaseSchema        interface{}        `json:"money_release_schema"`
-	TaxesAmount               int                `json:"taxes_amount"`
+	TaxesAmount               float64            `json:"taxes_amount"`
 	CounterCurrency           interface{}        `json:"counter_currency"`
-	ShippingAmount            int                `json:"shipping_amount"`
+	ShippingAmount            float64            `json:"shipping_amount"`
 	PosID                     interface{}        `json:"pos_id"`
 	StoreID                   interface{}        `json:"store_id"`
 	CollectorID               int                `json:"collector_id"`
@@ -53,8 +53,8 @@ type Payment struct {
 	Order                     struct{}           `json:"order"`
 	ExternalReference         string             `json:"external_reference"`
 	TransactionAmount         float64            `json:"transaction_amount"`
-	TransactionAmountRefunded int                `json:"transaction_amount_refunded"`
-	CouponAmount              int                `json:"coupon_amount"`
+	TransactionAmountRefunded float64            `json:"transaction_amount_refunded"`
+	CouponAmount              float64            `json:"coupon_amount"`
 	DifferentialPricingID     interface{}        `json:"differential_pricing_id"`
 	DeductionSchema           interface{}        `json:"deduction_schema"`
 	TransactionDetails        TransactionDetails `json:"transaction_details"`
@@ -78,7 +78,7 @@ type TransactionDetails struct {
 	PaymentMethodReferenceID interface{} `json:"payment_method_reference_id"`
 	NetReceivedAmount        float64     `json:"net_received_amount"`
 	TotalPaidAmount          float64     `json:"total_paid_amount"`
-	OverpaidAmount           int         `json:"overpaid_amount"`
+	OverpaidAmount           float64     `json:"overpaid_amount"`
 	ExternalResourceURL      interface{} `json:"external_resource_url"`
 	InstallmentAmount        float64     `json:"installment_amount"`
 	FinancialInstitution     interface{} `json:"financial_institution"`

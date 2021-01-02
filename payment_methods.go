@@ -32,8 +32,8 @@ type PaymentMethod struct {
 		} `json:"security_code"`
 	} `json:"settings"`
 	AdditionalInfoNeeded  []string `json:"additional_info_needed"`
-	MinAllowedAmount      int      `json:"min_allowed_amount"`
-	MaxAllowedAmount      int      `json:"max_allowed_amount"`
+	MinAllowedAmount      float64  `json:"min_allowed_amount"`
+	MaxAllowedAmount      float64  `json:"max_allowed_amount"`
 	AccreditationTime     int      `json:"accreditation_time"`
 	FinancialInstitutions []struct {
 		ID          string `json:"id"`
@@ -152,11 +152,11 @@ type Installment struct {
 		ReimbursementRate        interface{}   `json:"reimbursement_rate"`
 		Labels                   []interface{} `json:"labels"`
 		InstallmentRateCollector []string      `json:"installment_rate_collector"`
-		MinAllowedAmount         int           `json:"min_allowed_amount"`
-		MaxAllowedAmount         int           `json:"max_allowed_amount"`
+		MinAllowedAmount         float64       `json:"min_allowed_amount"`
+		MaxAllowedAmount         float64       `json:"max_allowed_amount"`
 		RecommendedMessage       string        `json:"recommended_message"`
 		InstallmentAmount        float64       `json:"installment_amount"`
-		TotalAmount              int           `json:"total_amount"`
+		TotalAmount              float64       `json:"total_amount"`
 		PaymentMethodOptionID    string        `json:"payment_method_option_id"`
 	} `json:"payer_costs"`
 	Agreements interface{} `json:"agreements"`
