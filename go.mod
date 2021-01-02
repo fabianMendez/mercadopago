@@ -1,4 +1,4 @@
-module github.com/fabianMendez/mercadopago/v1
+module github.com/fabianMendez/mercadopago
 
 go 1.15
 
