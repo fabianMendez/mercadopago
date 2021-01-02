@@ -78,12 +78,18 @@ type PaymentMethod struct {
 // GetPaymentMethods returns all available payment methods
 func (c *Client) GetPaymentMethods() (PaymentMethods, error) {
 	u := fmt.Sprintf("%s/payment_methods", c.baseURL)
+	if c.publicKey != "" {
+		u += fmt.Sprintf("?public_key=%s", c.publicKey)
+	}
+
 	req, err := http.NewRequest(http.MethodGet, u, nil)
 	if err != nil {
 		return nil, err
 	}
 
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", c.accessToken))
+	if c.accessToken != "" {
+		req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", c.accessToken))
+	}
 
 	var methods PaymentMethods
 	err = c.requestAndDecode(req, &methods)
