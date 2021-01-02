@@ -211,8 +211,8 @@ type Issuer struct {
 	MerchantAccountID interface{} `json:"merchant_account_id"`
 }
 
-// GetIssuers returns all available issuers for the given payment method
-func (c *Client) GetIssuers(paymentMethodID string) (Issuers, error) {
+// GetCardIssuers returns all available issuers for the given payment method
+func (c *Client) GetCardIssuers(paymentMethodID string) (Issuers, error) {
 	u := fmt.Sprintf("%s/payment_methods/card_issuers?public_key=%s&js_version=%s&payment_method_id=%s",
 		c.baseURL, c.publicKey, c.version, paymentMethodID)
 

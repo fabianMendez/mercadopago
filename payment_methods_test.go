@@ -1198,7 +1198,7 @@ func TestClient_GetInstallments(t *testing.T) {
 	}
 }
 
-func TestClient_GetIssuers(t *testing.T) {
+func TestClient_GetCardIssuers(t *testing.T) {
 	tests := []struct {
 		name             string
 		paymentMethodID  string
@@ -1232,7 +1232,7 @@ func TestClient_GetIssuers(t *testing.T) {
 
 			c := mercadopago.NewClient(server.URL, publicKey, "")
 
-			got, err := c.GetIssuers(tt.paymentMethodID)
+			got, err := c.GetCardIssuers(tt.paymentMethodID)
 
 			assert.Equal(t, tt.expectedErr, err)
 			assert.Equal(t, tt.expectedResponse, got)
