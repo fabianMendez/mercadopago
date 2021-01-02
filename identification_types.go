@@ -16,7 +16,7 @@ type IdentificationType struct {
 type IdentificationTypes []IdentificationType
 
 // GetIdentificationTypes returns all available identification types
-func (c *Client) GetIdentificationTypes() (IdentificationTypes, error) {
+func (c *client) GetIdentificationTypes() (IdentificationTypes, error) {
 	u := fmt.Sprintf("%s/identification_types", c.baseURL)
 	req, err := http.NewRequest(http.MethodGet, u, nil)
 	if err != nil {

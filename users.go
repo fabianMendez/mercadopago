@@ -20,7 +20,7 @@ type TestUserParams struct {
 }
 
 // NewTestUser creates a new test user
-func (c *Client) NewTestUser(params TestUserParams) (*TestUser, error) {
+func (c *client) NewTestUser(params TestUserParams) (*TestUser, error) {
 	u := fmt.Sprintf("%s/users/test_user", c.baseURL)
 
 	body, err := json.Marshal(params)

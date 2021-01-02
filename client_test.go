@@ -40,7 +40,7 @@ func TestClient_requestAndDecode(t *testing.T) {
 				_, _ = w.Write([]byte(tt.respBody))
 			}))
 
-			c := NewClient(server.URL, "access-token", "public-key")
+			c := NewClient(server.URL, "access-token", "public-key").(*client)
 
 			req, err := http.NewRequest(http.MethodGet, server.URL+"/", nil)
 			require.NoError(t, err)

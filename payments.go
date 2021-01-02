@@ -149,7 +149,7 @@ type Payment struct {
 }
 
 // NewPayment creates a new Payment
-func (c *Client) NewPayment(params PaymentParams) (*Payment, error) {
+func (c *client) NewPayment(params PaymentParams) (*Payment, error) {
 	u := fmt.Sprintf("%s/payments", c.baseURL)
 	body, err := json.Marshal(params)
 	if err != nil {

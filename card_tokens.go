@@ -31,7 +31,7 @@ type CardToken struct {
 }
 
 // NewCardToken creates a new CardToken
-func (c *Client) NewCardToken(params CardTokenParams) (*CardToken, error) {
+func (c *client) NewCardToken(params CardTokenParams) (*CardToken, error) {
 	u := fmt.Sprintf("%s/card_tokens?public_key=%s&js_version=%s", c.baseURL, c.publicKey, c.version)
 
 	body, err := json.Marshal(params)

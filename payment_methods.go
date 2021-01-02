@@ -76,7 +76,7 @@ type PaymentMethod struct {
 }
 
 // GetPaymentMethods returns all available payment methods
-func (c *Client) GetPaymentMethods() (PaymentMethods, error) {
+func (c *client) GetPaymentMethods() (PaymentMethods, error) {
 	u := fmt.Sprintf("%s/payment_methods", c.baseURL)
 	if c.publicKey != "" {
 		u += fmt.Sprintf("?public_key=%s", c.publicKey)
@@ -110,7 +110,7 @@ type paymentMethodsSearchResponse struct {
 }
 
 // GetPaymentMethodsForBin returns all available payment methods for the given bin
-func (c *Client) GetPaymentMethodsForBin(bin string) (PaymentMethods, error) {
+func (c *client) GetPaymentMethodsForBin(bin string) (PaymentMethods, error) {
 	u := fmt.Sprintf("%s/payment_methods/search?public_key=%s&marketplace=NONE&status=active&js_version=%s",
 		c.baseURL, c.publicKey, c.version)
 
@@ -170,7 +170,7 @@ type GetInstallmentsParams struct {
 
 // GetInstallments returns all available installments for the given
 // payment method, amount and issuer
-func (c *Client) GetInstallments(params GetInstallmentsParams) (Installments, error) {
+func (c *client) GetInstallments(params GetInstallmentsParams) (Installments, error) {
 	u := fmt.Sprintf("%s/payment_methods/installments?public_key=%s&js_version=%s",
 		c.baseURL, c.publicKey, c.version)
 
@@ -212,7 +212,7 @@ type Issuer struct {
 }
 
 // GetCardIssuers returns all available issuers for the given payment method
-func (c *Client) GetCardIssuers(paymentMethodID string) (Issuers, error) {
+func (c *client) GetCardIssuers(paymentMethodID string) (Issuers, error) {
 	u := fmt.Sprintf("%s/payment_methods/card_issuers?public_key=%s&js_version=%s&payment_method_id=%s",
 		c.baseURL, c.publicKey, c.version, paymentMethodID)
 

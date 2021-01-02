@@ -6,7 +6,35 @@ import (
 )
 
 // Client is the api client
-type Client struct {
+type Client interface {
+	// NewCardToken creates a new CardToken
+	NewCardToken(params CardTokenParams) (*CardToken, error)
+
+	// GetIdentificationTypes returns all available identification types
+	GetIdentificationTypes() (IdentificationTypes, error)
+
+	// GetPaymentMethods returns all available payment methods
+	GetPaymentMethods() (PaymentMethods, error)
+
+	// GetPaymentMethodsForBin returns all available payment methods for the given bin
+	GetPaymentMethodsForBin(bin string) (PaymentMethods, error)
+
+	// GetInstallments returns all available installments for the given
+	// payment method, amount and issuer
+	GetInstallments(params GetInstallmentsParams) (Installments, error)
+
+	// GetCardIssuers returns all available issuers for the given payment method
+	GetCardIssuers(paymentMethodID string) (Issuers, error)
+
+	// NewPayment creates a new Payment
+	NewPayment(params PaymentParams) (*Payment, error)
+
+	// NewTestUser creates a new test user
+	NewTestUser(params TestUserParams) (*TestUser, error)
+}
+
+// client is the api client implementation
+type client struct {
 	version     string
 	httpClient  *http.Client
 	baseURL     string
@@ -15,8 +43,8 @@ type Client struct {
 }
 
 // NewClient creates a new Client
-func NewClient(baseURL, publicKey, accessToken string) *Client {
-	return &Client{
+func NewClient(baseURL, publicKey, accessToken string) Client {
+	return &client{
 		httpClient:  http.DefaultClient,
 		baseURL:     baseURL,
 		accessToken: accessToken,
@@ -25,7 +53,7 @@ func NewClient(baseURL, publicKey, accessToken string) *Client {
 	}
 }
 
-func (c *Client) requestAndDecode(req *http.Request, response interface{}) error {
+func (c *client) requestAndDecode(req *http.Request, response interface{}) error {
 	resp, err := c.httpClient.Do(req)
 	if err != nil {
 		return err
