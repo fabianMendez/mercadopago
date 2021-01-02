@@ -1,7 +1,7 @@
 package mercadopago_test
 
 import (
-	"github.com/fabianMendez/mercadopago/v1"
+	"github.com/fabianMendez/mercadopago"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"io/ioutil"

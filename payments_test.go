@@ -1,7 +1,7 @@
 package mercadopago_test
 
 import (
-	"github.com/fabianMendez/mercadopago/v1"
+	"github.com/fabianMendez/mercadopago"
 	"github.com/stretchr/testify/assert"
 	"net/http"
 	"net/http/httptest"
