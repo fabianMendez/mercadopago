@@ -27,7 +27,7 @@ func main() {
 	cardToken, err := client.NewCardToken(mercadopago.CardTokenParams{
 		ExpirationMonth: 11,
 		ExpirationYear:  2025,
-		Cardholder: mercadopago.CardHolder{Name: "APRO", Identification: identification},
+		Cardholder: mercadopago.Cardholder{Name: "APRO", Identification: identification},
 		SecurityCode: "123",
 		CardNumber:   "4013540682746260",
 	})

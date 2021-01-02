@@ -11,7 +11,7 @@ import (
 type CardTokenParams struct {
 	ExpirationMonth int        `json:"expiration_month"`
 	ExpirationYear  int        `json:"expiration_year"`
-	Cardholder      CardHolder `json:"cardholder"`
+	Cardholder      Cardholder `json:"cardholder"`
 	SecurityCode    string     `json:"security_code"`
 	CardNumber      string     `json:"card_number"`
 }
@@ -20,7 +20,7 @@ type CardTokenParams struct {
 type CardToken struct {
 	ID              string     `json:"id"`
 	PublicKey       string     `json:"public_key"`
-	Cardholder      CardHolder `json:"cardholder"`
+	Cardholder      Cardholder `json:"cardholder"`
 	Status          string     `json:"status"`
 	DateCreated     string     `json:"date_created"`
 	DateLastUpdated string     `json:"date_last_updated"`

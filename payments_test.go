@@ -83,7 +83,7 @@ func TestClient_NewPayment(t *testing.T) {
 					ExpirationMonth: 11, ExpirationYear: 2025,
 					DateCreated:     "2021-01-01T22:42:18.000-04:00",
 					DateLastUpdated: "2021-01-01T22:42:18.000-04:00",
-					Cardholder: mercadopago.CardHolder{
+					Cardholder: mercadopago.Cardholder{
 						Name:           "OTHE",
 						Identification: mercadopago.Identification{Number: "23090923", Type: "CC"},
 					},

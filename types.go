@@ -18,7 +18,7 @@ type Payer struct {
 	// ,"phone":{"area_code":"","number":"","extension":""}}
 }
 
-type CardHolder struct {
+type Cardholder struct {
 	Name           string         `json:"name"`
 	Identification Identification `json:"identification"`
 }
@@ -37,5 +37,5 @@ type Card struct {
 	ExpirationYear  int         `json:"expiration_year"`
 	DateCreated     string      `json:"date_created"`
 	DateLastUpdated string      `json:"date_last_updated"`
-	Cardholder      CardHolder  `json:"cardholder"`
+	Cardholder      Cardholder  `json:"cardholder"`
 }
