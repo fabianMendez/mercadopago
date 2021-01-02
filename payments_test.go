@@ -3,6 +3,8 @@ package mercadopago_test
 import (
 	"github.com/fabianMendez/mercadopago"
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
+	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -19,10 +21,33 @@ func TestClient_NewPayment(t *testing.T) {
 		respBody         string
 	}{
 		{
-			name:       "successful response",
-			params:     mercadopago.PaymentParams{},
-			respStatus: http.StatusOK,
-			respBody:   `{"id":1232478005,"date_created":"2021-01-01T22:42:18.000-04:00","date_approved":null,"date_last_updated":"2021-01-01T22:42:18.000-04:00","date_of_expiration":null,"money_release_date":null,"operation_type":"regular_payment","issuer_id":"202","payment_method_id":"amex","payment_type_id":"credit_card","status":"rejected","status_detail":"cc_rejected_other_reason","currency_id":"COP","description":"Pago de prueba","live_mode":false,"sponsor_id":null,"authorization_code":null,"money_release_schema":null,"taxes_amount":0,"counter_currency":null,"brand_id":null,"shipping_amount":0,"pos_id":null,"store_id":null,"integrator_id":null,"platform_id":null,"corporation_id":null,"collector_id":695864235,"payer":{"first_name":"Test","last_name":"Test","email":"test_user_80507629@testuser.com","identification":{"number":"32659430","type":"DNI"},"phone":{"area_code":"01","number":"1111-1111","extension":""},"type":"registered","entity_type":null,"id":"695869370"},"marketplace_owner":null,"metadata":{},"additional_info":{"available_balance":null,"nsu_processadora":null},"order":{},"external_reference":null,"transaction_amount":2000,"net_amount":1680.67,"taxes":[{"value":319.33,"type":"IVA"}],"transaction_amount_refunded":0,"coupon_amount":0,"differential_pricing_id":null,"deduction_schema":null,"installments":1,"transaction_details":{"payment_method_reference_id":null,"net_received_amount":0,"total_paid_amount":2000,"overpaid_amount":0,"external_resource_url":null,"installment_amount":2000,"financial_institution":null,"payable_deferral_period":null,"acquirer_reference":null},"fee_details":[],"charges_details":[],"captured":true,"binary_mode":false,"call_for_authorize_id":null,"statement_descriptor":"MERCADOPAGO","card":{"id":null,"first_six_digits":"374378","last_four_digits":"5283","expiration_month":11,"expiration_year":2025,"date_created":"2021-01-01T22:42:18.000-04:00","date_last_updated":"2021-01-01T22:42:18.000-04:00","cardholder":{"name":"OTHE","identification":{"number":"23090923","type":"CC"}}},"notification_url":null,"refunds":[],"processing_mode":"aggregator","merchant_account_id":null,"merchant_number":null,"acquirer_reconciliation":[]}`,
+			name: "successful response",
+			params: mercadopago.PaymentParams{
+				TransactionAmount: 1234.56,
+				PaymentMethodID:   "visa",
+				Payer: mercadopago.Payer{
+					Email: "testuser@test.com",
+					Identification: mercadopago.Identification{
+						Type:   "CC",
+						Number: "1234567890",
+					},
+				},
+				Token:               "card-token",
+				Description:         "payment test",
+				Installments:        1,
+				NotificationURL:     "http://localhost:1234/callback",
+				BinaryMode:          false,
+				ExternalReference:   "MP001",
+				StatementDescriptor: "MercadoPago",
+				AdditionalInfo: map[string]interface{}{
+					"items": []map[string]interface{}{
+						{"id": "123", "title": "Test Product 1", "quantity": 1, "unit_price": 1234.5},
+					},
+				},
+			},
+			expectedBody: `{"transaction_amount":1234.56,"payment_method_id":"visa","payer":{"email":"testuser@test.com","identification":{"type":"CC","number":"1234567890"}},"token":"card-token","description":"payment test","installments":1,"notification_url":"http://localhost:1234/callback","sponsor_id":null,"binary_mode":false,"external_reference":"MP001","statement_descriptor":"MercadoPago","additional_info":{"items":[{"id":"123","quantity":1,"title":"Test Product 1","unit_price":1234.5}]}}`,
+			respStatus:   http.StatusOK,
+			respBody:     `{"id":1232478005,"date_created":"2021-01-01T22:42:18.000-04:00","date_approved":null,"date_last_updated":"2021-01-01T22:42:18.000-04:00","date_of_expiration":null,"money_release_date":null,"operation_type":"regular_payment","issuer_id":"202","payment_method_id":"amex","payment_type_id":"credit_card","status":"rejected","status_detail":"cc_rejected_other_reason","currency_id":"COP","description":"Pago de prueba","live_mode":false,"sponsor_id":null,"authorization_code":null,"money_release_schema":null,"taxes_amount":0,"counter_currency":null,"brand_id":null,"shipping_amount":0,"pos_id":null,"store_id":null,"integrator_id":null,"platform_id":null,"corporation_id":null,"collector_id":695864235,"payer":{"first_name":"Test","last_name":"Test","email":"test_user_80507629@testuser.com","identification":{"number":"32659430","type":"DNI"},"phone":{"area_code":"01","number":"1111-1111","extension":""},"type":"registered","entity_type":null,"id":"695869370"},"marketplace_owner":null,"metadata":{},"additional_info":{"available_balance":null,"nsu_processadora":null},"order":{},"external_reference":null,"transaction_amount":2000,"net_amount":1680.67,"taxes":[{"value":319.33,"type":"IVA"}],"transaction_amount_refunded":0,"coupon_amount":0,"differential_pricing_id":null,"deduction_schema":null,"installments":1,"transaction_details":{"payment_method_reference_id":null,"net_received_amount":0,"total_paid_amount":2000,"overpaid_amount":0,"external_resource_url":null,"installment_amount":2000,"financial_institution":null,"payable_deferral_period":null,"acquirer_reference":null},"fee_details":[],"charges_details":[],"captured":true,"binary_mode":false,"call_for_authorize_id":null,"statement_descriptor":"MERCADOPAGO","card":{"id":null,"first_six_digits":"374378","last_four_digits":"5283","expiration_month":11,"expiration_year":2025,"date_created":"2021-01-01T22:42:18.000-04:00","date_last_updated":"2021-01-01T22:42:18.000-04:00","cardholder":{"name":"OTHE","identification":{"number":"23090923","type":"CC"}}},"notification_url":null,"refunds":[],"processing_mode":"aggregator","merchant_account_id":null,"merchant_number":null,"acquirer_reconciliation":[]}`,
 			expectedResponse: &mercadopago.Payment{ID: 1232478005, DateCreated: "2021-01-01T22:42:18.000-04:00", DateApproved: "", DateLastUpdated: "2021-01-01T22:42:18.000-04:00", DateOfExpiration: interface{}(nil), MoneyReleaseDate: "", OperationType: "regular_payment", IssuerID: "202", PaymentMethodID: "amex", PaymentTypeID: "credit_card", Status: "rejected", StatusDetail: "cc_rejected_other_reason", CurrencyID: "COP", Description: "Pago de prueba", LiveMode: false, SponsorID: interface{}(nil), AuthorizationCode: interface{}(nil), MoneyReleaseSchema: interface{}(nil), TaxesAmount: 0, CounterCurrency: interface{}(nil), ShippingAmount: 0, PosID: interface{}(nil), StoreID: interface{}(nil), CollectorID: 695864235, Payer: struct {
 				FirstName      string "json:\"first_name\""
 				LastName       string "json:\"last_name\""
@@ -171,6 +196,11 @@ func TestClient_NewPayment(t *testing.T) {
 				assert.Equal(t, "/payments", r.URL.Path)
 
 				assert.Equal(t, "Bearer "+accessToken, r.Header.Get("Authorization"))
+
+				body, err := ioutil.ReadAll(r.Body)
+				require.NoError(t, err)
+
+				assert.Equal(t, tt.expectedBody, string(body))
 
 				w.WriteHeader(tt.respStatus)
 				_, _ = w.Write([]byte(tt.respBody))

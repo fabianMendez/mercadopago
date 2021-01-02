@@ -8,12 +8,18 @@ import (
 )
 
 type PaymentParams struct {
-	TransactionAmount float64 `json:"transaction_amount"`
-	PaymentMethodID   string  `json:"payment_method_id"`
-	Payer             Payer   `json:"payer"`
-	Token             string  `json:"token"`
-	Description       string  `json:"description"`
-	Installments      int     `json:"installments"`
+	TransactionAmount   float64     `json:"transaction_amount"`
+	PaymentMethodID     string      `json:"payment_method_id"`
+	Payer               Payer       `json:"payer"`
+	Token               string      `json:"token"`
+	Description         string      `json:"description"`
+	Installments        int         `json:"installments"`
+	NotificationURL     string      `json:"notification_url"`
+	SponsorID           interface{} `json:"sponsor_id"`
+	BinaryMode          bool        `json:"binary_mode"`
+	ExternalReference   string      `json:"external_reference"`
+	StatementDescriptor string      `json:"statement_descriptor"`
+	AdditionalInfo      interface{} `json:"additional_info"`
 }
 
 type Payment struct {
