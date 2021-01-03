@@ -9,7 +9,7 @@ type Error struct {
 }
 
 type ErrorCause struct {
-	Code        int         `json:"code"`
+	Code        string      `json:"code"`
 	Description string      `json:"description"`
 	Data        interface{} `json:"data"`
 }

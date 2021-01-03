@@ -27,6 +27,19 @@ func TestClient_requestAndDecode(t *testing.T) {
 				Cause:   []ErrorCause{},
 			},
 		},
+		{
+			name:       "invalid parameter",
+			respStatus: http.StatusBadRequest,
+			respBody:   `{"message":"Invalid Value for Field: cardholder.name","status":400,"error":"bad_request","cause":[{"description":"Invalid parameter 'cardholder.name'","code":"316"}]}`,
+			expectedErr: Error{
+				Message:   "Invalid Value for Field: cardholder.name",
+				Status:    400,
+				ErrorCode: "bad_request",
+				Cause: []ErrorCause{
+					{Code: "316", Description: `Invalid parameter 'cardholder.name'`},
+				},
+			},
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
