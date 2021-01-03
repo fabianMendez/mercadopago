@@ -41,17 +41,8 @@ type PaymentMethod struct {
 	} `json:"financial_institutions"`
 	ProcessingModes []string `json:"processing_modes"`
 	// from the search response only
-	PayerCosts []struct {
-		InstallmentRate       int           `json:"installment_rate"`
-		DiscountRate          int           `json:"discount_rate"`
-		MinAllowedAmount      float64       `json:"min_allowed_amount"`
-		Labels                []interface{} `json:"labels"`
-		Installments          int           `json:"installments"`
-		ReimbursementRate     interface{}   `json:"reimbursement_rate"`
-		MaxAllowedAmount      float64       `json:"max_allowed_amount"`
-		PaymentMethodOptionID string        `json:"payment_method_option_id"`
-	} `json:"payer_costs"`
-	Issuer struct {
+	PayerCosts PayerCosts `json:"payer_costs"`
+	Issuer     struct {
 		Default bool   `json:"default"`
 		Name    string `json:"name"`
 		ID      int    `json:"id"`
@@ -145,21 +136,8 @@ type Installment struct {
 	} `json:"issuer"`
 	ProcessingMode    string      `json:"processing_mode"`
 	MerchantAccountID interface{} `json:"merchant_account_id"`
-	PayerCosts        []struct {
-		Installments             int           `json:"installments"`
-		InstallmentRate          int           `json:"installment_rate"`
-		DiscountRate             int           `json:"discount_rate"`
-		ReimbursementRate        interface{}   `json:"reimbursement_rate"`
-		Labels                   []interface{} `json:"labels"`
-		InstallmentRateCollector []string      `json:"installment_rate_collector"`
-		MinAllowedAmount         float64       `json:"min_allowed_amount"`
-		MaxAllowedAmount         float64       `json:"max_allowed_amount"`
-		RecommendedMessage       string        `json:"recommended_message"`
-		InstallmentAmount        float64       `json:"installment_amount"`
-		TotalAmount              float64       `json:"total_amount"`
-		PaymentMethodOptionID    string        `json:"payment_method_option_id"`
-	} `json:"payer_costs"`
-	Agreements interface{} `json:"agreements"`
+	PayerCosts        PayerCosts  `json:"payer_costs"`
+	Agreements        interface{} `json:"agreements"`
 }
 
 type GetInstallmentsParams struct {

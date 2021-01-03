@@ -54,16 +54,7 @@ func TestClient_GetPaymentMethods(t *testing.T) {
 				}{Length: 3, CardLocation: "back", Mode: "mandatory"}}}, AdditionalInfoNeeded: []string{"cardholder_name", "cardholder_identification_number", "cardholder_identification_type"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, AccreditationTime: 2880, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{}, ProcessingModes: []string{"aggregator"}, PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}(nil), Issuer: struct {
+				}{}, ProcessingModes: []string{"aggregator"}, PayerCosts: nil, Issuer: struct {
 					Default bool   "json:\"default\""
 					Name    string "json:\"name\""
 					ID      int    "json:\"id\""
@@ -103,16 +94,7 @@ func TestClient_GetPaymentMethods(t *testing.T) {
 				}{Length: 3, CardLocation: "back", Mode: "mandatory"}}}, AdditionalInfoNeeded: []string{"cardholder_name", "cardholder_identification_number", "cardholder_identification_type"}, MinAllowedAmount: 1000, MaxAllowedAmount: 5000000, AccreditationTime: 0, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{}, ProcessingModes: []string{"aggregator"}, PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}(nil), Issuer: struct {
+				}{}, ProcessingModes: []string{"aggregator"}, PayerCosts: nil, Issuer: struct {
 					Default bool   "json:\"default\""
 					Name    string "json:\"name\""
 					ID      int    "json:\"id\""
@@ -152,16 +134,7 @@ func TestClient_GetPaymentMethods(t *testing.T) {
 				}{Length: 3, CardLocation: "back", Mode: "mandatory"}}}, AdditionalInfoNeeded: []string{"cardholder_name", "cardholder_identification_type", "cardholder_identification_number"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, AccreditationTime: 0, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{}, ProcessingModes: []string{"aggregator"}, PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}(nil), Issuer: struct {
+				}{}, ProcessingModes: []string{"aggregator"}, Issuer: struct {
 					Default bool   "json:\"default\""
 					Name    string "json:\"name\""
 					ID      int    "json:\"id\""
@@ -201,16 +174,7 @@ func TestClient_GetPaymentMethods(t *testing.T) {
 				}{Length: 3, CardLocation: "back", Mode: "mandatory"}}}, AdditionalInfoNeeded: []string{"cardholder_name", "cardholder_identification_type", "cardholder_identification_number"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, AccreditationTime: 0, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{}, ProcessingModes: []string{"aggregator"}, PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}(nil), Issuer: struct {
+				}{}, ProcessingModes: []string{"aggregator"}, Issuer: struct {
 					Default bool   "json:\"default\""
 					Name    string "json:\"name\""
 					ID      int    "json:\"id\""
@@ -250,16 +214,7 @@ func TestClient_GetPaymentMethods(t *testing.T) {
 				}{Length: 3, CardLocation: "back", Mode: "mandatory"}}}, AdditionalInfoNeeded: []string{"cardholder_name", "cardholder_identification_number", "cardholder_identification_type"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, AccreditationTime: 2880, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{}, ProcessingModes: []string{"aggregator"}, PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}(nil), Issuer: struct {
+				}{}, ProcessingModes: []string{"aggregator"}, Issuer: struct {
 					Default bool   "json:\"default\""
 					Name    string "json:\"name\""
 					ID      int    "json:\"id\""
@@ -299,16 +254,7 @@ func TestClient_GetPaymentMethods(t *testing.T) {
 				}{Length: 4, CardLocation: "front", Mode: "mandatory"}}}, AdditionalInfoNeeded: []string{"cardholder_name", "cardholder_identification_number", "cardholder_identification_type"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, AccreditationTime: 2880, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{}, ProcessingModes: []string{"aggregator"}, PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}(nil), Issuer: struct {
+				}{}, ProcessingModes: []string{"aggregator"}, Issuer: struct {
 					Default bool   "json:\"default\""
 					Name    string "json:\"name\""
 					ID      int    "json:\"id\""
@@ -348,16 +294,7 @@ func TestClient_GetPaymentMethods(t *testing.T) {
 				}{Length: 3, CardLocation: "back", Mode: "mandatory"}}}, AdditionalInfoNeeded: []string{"cardholder_name", "cardholder_identification_number", "cardholder_identification_type"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, AccreditationTime: 2880, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{}, ProcessingModes: []string{"aggregator"}, PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}(nil), Issuer: struct {
+				}{}, ProcessingModes: []string{"aggregator"}, Issuer: struct {
 					Default bool   "json:\"default\""
 					Name    string "json:\"name\""
 					ID      int    "json:\"id\""
@@ -386,16 +323,7 @@ func TestClient_GetPaymentMethods(t *testing.T) {
 				}{}, AdditionalInfoNeeded: []string{}, MinAllowedAmount: 5000, MaxAllowedAmount: 4000000, AccreditationTime: 0, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{}, ProcessingModes: []string{"aggregator"}, PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}(nil), Issuer: struct {
+				}{}, ProcessingModes: []string{"aggregator"}, Issuer: struct {
 					Default bool   "json:\"default\""
 					Name    string "json:\"name\""
 					ID      int    "json:\"id\""
@@ -424,16 +352,7 @@ func TestClient_GetPaymentMethods(t *testing.T) {
 				}{}, AdditionalInfoNeeded: []string{"entity_type"}, MinAllowedAmount: 1600, MaxAllowedAmount: 30000000, AccreditationTime: 30, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{{ID: "1040", Description: "Banco Agrario"}, {ID: "1507", Description: "NEQUI"}, {ID: "1052", Description: "Banco AV Villas"}, {ID: "1032", Description: "Banco Caja Social"}, {ID: "1019", Description: "SCOTIABANK COLPATRIA"}, {ID: "1066", Description: "Banco Cooperativo Coopcentral"}, {ID: "1051", Description: "Banco Davivienda"}, {ID: "1001", Description: "Banco De Bogota"}, {ID: "1023", Description: "Banco De Occidente"}, {ID: "1062", Description: "Banco Falabella"}, {ID: "1012", Description: "Banco GNB Sudameris"}, {ID: "1060", Description: "Banco Pichincha S.A."}, {ID: "1002", Description: "Banco Popular"}, {ID: "1058", Description: "Banco Procredit"}, {ID: "1007", Description: "Bancolombia"}, {ID: "1061", Description: "Bancoomeva S.A."}, {ID: "1013", Description: "Banco BBVA Colombia S.A."}, {ID: "1009", Description: "Citibank"}, {ID: "1006", Description: "Banco Itaú"}, {ID: "1292", Description: "Confiar Cooperativa Financiera"}, {ID: "1551", Description: "DaviPlata"}, {ID: "1069", Description: "BANCO SERFINANZA"}, {ID: "1065", Description: "BANCO SANTANDER COLOMBIA"}, {ID: "1283", Description: "CFA COOPERATIVA FINANCIERA"}, {ID: "1059", Description: "BANCO DE LAS MICROFINANZAS BANCAMIA"}, {ID: "1151", Description: "RAPPIPAY"}, {ID: "1289", Description: "Cotrafa"}, {ID: "1370", Description: "COLTEFINANCIERA"}}, ProcessingModes: []string{"aggregator"}, PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}(nil), Issuer: struct {
+				}{{ID: "1040", Description: "Banco Agrario"}, {ID: "1507", Description: "NEQUI"}, {ID: "1052", Description: "Banco AV Villas"}, {ID: "1032", Description: "Banco Caja Social"}, {ID: "1019", Description: "SCOTIABANK COLPATRIA"}, {ID: "1066", Description: "Banco Cooperativo Coopcentral"}, {ID: "1051", Description: "Banco Davivienda"}, {ID: "1001", Description: "Banco De Bogota"}, {ID: "1023", Description: "Banco De Occidente"}, {ID: "1062", Description: "Banco Falabella"}, {ID: "1012", Description: "Banco GNB Sudameris"}, {ID: "1060", Description: "Banco Pichincha S.A."}, {ID: "1002", Description: "Banco Popular"}, {ID: "1058", Description: "Banco Procredit"}, {ID: "1007", Description: "Bancolombia"}, {ID: "1061", Description: "Bancoomeva S.A."}, {ID: "1013", Description: "Banco BBVA Colombia S.A."}, {ID: "1009", Description: "Citibank"}, {ID: "1006", Description: "Banco Itaú"}, {ID: "1292", Description: "Confiar Cooperativa Financiera"}, {ID: "1551", Description: "DaviPlata"}, {ID: "1069", Description: "BANCO SERFINANZA"}, {ID: "1065", Description: "BANCO SANTANDER COLOMBIA"}, {ID: "1283", Description: "CFA COOPERATIVA FINANCIERA"}, {ID: "1059", Description: "BANCO DE LAS MICROFINANZAS BANCAMIA"}, {ID: "1151", Description: "RAPPIPAY"}, {ID: "1289", Description: "Cotrafa"}, {ID: "1370", Description: "COLTEFINANCIERA"}}, ProcessingModes: []string{"aggregator"}, Issuer: struct {
 					Default bool   "json:\"default\""
 					Name    string "json:\"name\""
 					ID      int    "json:\"id\""
@@ -462,16 +381,7 @@ func TestClient_GetPaymentMethods(t *testing.T) {
 				}{}, AdditionalInfoNeeded: []string{}, MinAllowedAmount: 1500, MaxAllowedAmount: 1000000, AccreditationTime: 0, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{}, ProcessingModes: []string{"aggregator"}, PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}(nil), Issuer: struct {
+				}{}, ProcessingModes: []string{"aggregator"}, Issuer: struct {
 					Default bool   "json:\"default\""
 					Name    string "json:\"name\""
 					ID      int    "json:\"id\""
@@ -519,16 +429,7 @@ func TestClient_GetPaymentMethods(t *testing.T) {
 				}{Length: 3, CardLocation: "back", Mode: "mandatory"}}}, AdditionalInfoNeeded: []string{"cardholder_name", "cardholder_identification_number", "cardholder_identification_type"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, AccreditationTime: 2880, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{}, ProcessingModes: []string{"aggregator"}, PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}(nil), Issuer: struct {
+				}{}, ProcessingModes: []string{"aggregator"}, Issuer: struct {
 					Default bool   "json:\"default\""
 					Name    string "json:\"name\""
 					ID      int    "json:\"id\""
@@ -568,16 +469,7 @@ func TestClient_GetPaymentMethods(t *testing.T) {
 				}{Length: 3, CardLocation: "back", Mode: "mandatory"}}}, AdditionalInfoNeeded: []string{"cardholder_name", "cardholder_identification_number", "cardholder_identification_type"}, MinAllowedAmount: 1000, MaxAllowedAmount: 5000000, AccreditationTime: 0, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{}, ProcessingModes: []string{"aggregator"}, PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}(nil), Issuer: struct {
+				}{}, ProcessingModes: []string{"aggregator"}, Issuer: struct {
 					Default bool   "json:\"default\""
 					Name    string "json:\"name\""
 					ID      int    "json:\"id\""
@@ -617,16 +509,7 @@ func TestClient_GetPaymentMethods(t *testing.T) {
 				}{Length: 3, CardLocation: "back", Mode: "mandatory"}}}, AdditionalInfoNeeded: []string{"cardholder_name", "cardholder_identification_type", "cardholder_identification_number"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, AccreditationTime: 0, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{}, ProcessingModes: []string{"aggregator"}, PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}(nil), Issuer: struct {
+				}{}, ProcessingModes: []string{"aggregator"}, Issuer: struct {
 					Default bool   "json:\"default\""
 					Name    string "json:\"name\""
 					ID      int    "json:\"id\""
@@ -666,16 +549,7 @@ func TestClient_GetPaymentMethods(t *testing.T) {
 				}{Length: 3, CardLocation: "back", Mode: "mandatory"}}}, AdditionalInfoNeeded: []string{"cardholder_name", "cardholder_identification_type", "cardholder_identification_number"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, AccreditationTime: 0, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{}, ProcessingModes: []string{"aggregator"}, PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}(nil), Issuer: struct {
+				}{}, ProcessingModes: []string{"aggregator"}, Issuer: struct {
 					Default bool   "json:\"default\""
 					Name    string "json:\"name\""
 					ID      int    "json:\"id\""
@@ -715,16 +589,7 @@ func TestClient_GetPaymentMethods(t *testing.T) {
 				}{Length: 3, CardLocation: "back", Mode: "mandatory"}}}, AdditionalInfoNeeded: []string{"cardholder_name", "cardholder_identification_number", "cardholder_identification_type"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, AccreditationTime: 2880, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{}, ProcessingModes: []string{"aggregator"}, PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}(nil), Issuer: struct {
+				}{}, ProcessingModes: []string{"aggregator"}, Issuer: struct {
 					Default bool   "json:\"default\""
 					Name    string "json:\"name\""
 					ID      int    "json:\"id\""
@@ -764,16 +629,7 @@ func TestClient_GetPaymentMethods(t *testing.T) {
 				}{Length: 4, CardLocation: "front", Mode: "mandatory"}}}, AdditionalInfoNeeded: []string{"cardholder_name", "cardholder_identification_number", "cardholder_identification_type"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, AccreditationTime: 2880, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{}, ProcessingModes: []string{"aggregator"}, PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}(nil), Issuer: struct {
+				}{}, ProcessingModes: []string{"aggregator"}, Issuer: struct {
 					Default bool   "json:\"default\""
 					Name    string "json:\"name\""
 					ID      int    "json:\"id\""
@@ -813,16 +669,7 @@ func TestClient_GetPaymentMethods(t *testing.T) {
 				}{Length: 3, CardLocation: "back", Mode: "mandatory"}}}, AdditionalInfoNeeded: []string{"cardholder_name", "cardholder_identification_number", "cardholder_identification_type"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, AccreditationTime: 2880, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{}, ProcessingModes: []string{"aggregator"}, PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}(nil), Issuer: struct {
+				}{}, ProcessingModes: []string{"aggregator"}, Issuer: struct {
 					Default bool   "json:\"default\""
 					Name    string "json:\"name\""
 					ID      int    "json:\"id\""
@@ -851,16 +698,7 @@ func TestClient_GetPaymentMethods(t *testing.T) {
 				}{}, AdditionalInfoNeeded: []string{}, MinAllowedAmount: 5000, MaxAllowedAmount: 4000000, AccreditationTime: 0, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{}, ProcessingModes: []string{"aggregator"}, PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}(nil), Issuer: struct {
+				}{}, ProcessingModes: []string{"aggregator"}, Issuer: struct {
 					Default bool   "json:\"default\""
 					Name    string "json:\"name\""
 					ID      int    "json:\"id\""
@@ -889,16 +727,7 @@ func TestClient_GetPaymentMethods(t *testing.T) {
 				}{}, AdditionalInfoNeeded: []string{"entity_type"}, MinAllowedAmount: 1600, MaxAllowedAmount: 30000000, AccreditationTime: 30, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{{ID: "1040", Description: "Banco Agrario"}, {ID: "1507", Description: "NEQUI"}, {ID: "1052", Description: "Banco AV Villas"}, {ID: "1032", Description: "Banco Caja Social"}, {ID: "1019", Description: "SCOTIABANK COLPATRIA"}, {ID: "1066", Description: "Banco Cooperativo Coopcentral"}, {ID: "1051", Description: "Banco Davivienda"}, {ID: "1001", Description: "Banco De Bogota"}, {ID: "1023", Description: "Banco De Occidente"}, {ID: "1062", Description: "Banco Falabella"}, {ID: "1012", Description: "Banco GNB Sudameris"}, {ID: "1060", Description: "Banco Pichincha S.A."}, {ID: "1002", Description: "Banco Popular"}, {ID: "1058", Description: "Banco Procredit"}, {ID: "1007", Description: "Bancolombia"}, {ID: "1061", Description: "Bancoomeva S.A."}, {ID: "1013", Description: "Banco BBVA Colombia S.A."}, {ID: "1009", Description: "Citibank"}, {ID: "1006", Description: "Banco Itaú"}, {ID: "1292", Description: "Confiar Cooperativa Financiera"}, {ID: "1551", Description: "DaviPlata"}, {ID: "1069", Description: "BANCO SERFINANZA"}, {ID: "1065", Description: "BANCO SANTANDER COLOMBIA"}, {ID: "1283", Description: "CFA COOPERATIVA FINANCIERA"}, {ID: "1059", Description: "BANCO DE LAS MICROFINANZAS BANCAMIA"}, {ID: "1151", Description: "RAPPIPAY"}, {ID: "1289", Description: "Cotrafa"}, {ID: "1370", Description: "COLTEFINANCIERA"}}, ProcessingModes: []string{"aggregator"}, PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}(nil), Issuer: struct {
+				}{{ID: "1040", Description: "Banco Agrario"}, {ID: "1507", Description: "NEQUI"}, {ID: "1052", Description: "Banco AV Villas"}, {ID: "1032", Description: "Banco Caja Social"}, {ID: "1019", Description: "SCOTIABANK COLPATRIA"}, {ID: "1066", Description: "Banco Cooperativo Coopcentral"}, {ID: "1051", Description: "Banco Davivienda"}, {ID: "1001", Description: "Banco De Bogota"}, {ID: "1023", Description: "Banco De Occidente"}, {ID: "1062", Description: "Banco Falabella"}, {ID: "1012", Description: "Banco GNB Sudameris"}, {ID: "1060", Description: "Banco Pichincha S.A."}, {ID: "1002", Description: "Banco Popular"}, {ID: "1058", Description: "Banco Procredit"}, {ID: "1007", Description: "Bancolombia"}, {ID: "1061", Description: "Bancoomeva S.A."}, {ID: "1013", Description: "Banco BBVA Colombia S.A."}, {ID: "1009", Description: "Citibank"}, {ID: "1006", Description: "Banco Itaú"}, {ID: "1292", Description: "Confiar Cooperativa Financiera"}, {ID: "1551", Description: "DaviPlata"}, {ID: "1069", Description: "BANCO SERFINANZA"}, {ID: "1065", Description: "BANCO SANTANDER COLOMBIA"}, {ID: "1283", Description: "CFA COOPERATIVA FINANCIERA"}, {ID: "1059", Description: "BANCO DE LAS MICROFINANZAS BANCAMIA"}, {ID: "1151", Description: "RAPPIPAY"}, {ID: "1289", Description: "Cotrafa"}, {ID: "1370", Description: "COLTEFINANCIERA"}}, ProcessingModes: []string{"aggregator"}, Issuer: struct {
 					Default bool   "json:\"default\""
 					Name    string "json:\"name\""
 					ID      int    "json:\"id\""
@@ -927,16 +756,7 @@ func TestClient_GetPaymentMethods(t *testing.T) {
 				}{}, AdditionalInfoNeeded: []string{}, MinAllowedAmount: 1500, MaxAllowedAmount: 1000000, AccreditationTime: 0, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{}, ProcessingModes: []string{"aggregator"}, PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}(nil), Issuer: struct {
+				}{}, ProcessingModes: []string{"aggregator"}, Issuer: struct {
 					Default bool   "json:\"default\""
 					Name    string "json:\"name\""
 					ID      int    "json:\"id\""
@@ -1018,26 +838,29 @@ func TestClient_GetPaymentMethodsForBin(t *testing.T) {
 			}{Length: 3, CardLocation: "back", Mode: "mandatory"}}}, AdditionalInfoNeeded: []string{"cardholder_name", "cardholder_identification_number", "cardholder_identification_type"}, MinAllowedAmount: 0, MaxAllowedAmount: 0, AccreditationTime: 2880, FinancialInstitutions: []struct {
 				ID          string "json:\"id\""
 				Description string "json:\"description\""
-			}{}, ProcessingModes: []string(nil), PayerCosts: []struct {
-				InstallmentRate       int           "json:\"installment_rate\""
-				DiscountRate          int           "json:\"discount_rate\""
-				MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-				Labels                []interface{} "json:\"labels\""
-				Installments          int           "json:\"installments\""
-				ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-				MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-				PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-			}{{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 1, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 2, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 3, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 4, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 5, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 6, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 12, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 18, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 24, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{"recommended_installment"}, Installments: 36, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}}, Issuer: struct {
-				Default bool   "json:\"default\""
-				Name    string "json:\"name\""
-				ID      int    "json:\"id\""
-			}{Default: true, Name: "Mastercard", ID: 204}, TotalFinancialCost: interface{}(nil), MinAccreditationDays: 0, MaxAccreditationDays: 2, MerchantAccountID: interface{}(nil), Bins: []interface{}{}, Marketplace: "NONE", Agreements: []interface{}{}, Labels: []string{"recommended_method"}, FinancingDeals: struct {
-				Legals         interface{} "json:\"legals\""
-				Installments   interface{} "json:\"installments\""
-				ExpirationDate interface{} "json:\"expiration_date\""
-				StartDate      interface{} "json:\"start_date\""
-				Status         string      "json:\"status\""
-			}{Legals: interface{}(nil), Installments: interface{}(nil), ExpirationDate: interface{}(nil), StartDate: interface{}(nil), Status: "deactive"}, SiteID: "MCO", ProcessingMode: "aggregator"}},
+			}{},
+				PayerCosts: mercadopago.PayerCosts{
+					{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 1, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 2, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 3, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 4, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 5, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 6, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 12, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 18, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 24, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{"recommended_installment"}, Installments: 36, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+				}, Issuer: struct {
+					Default bool   "json:\"default\""
+					Name    string "json:\"name\""
+					ID      int    "json:\"id\""
+				}{Default: true, Name: "Mastercard", ID: 204}, TotalFinancialCost: interface{}(nil), MinAccreditationDays: 0, MaxAccreditationDays: 2, MerchantAccountID: interface{}(nil), Bins: []interface{}{}, Marketplace: "NONE", Agreements: []interface{}{}, Labels: []string{"recommended_method"}, FinancingDeals: struct {
+					Legals         interface{} "json:\"legals\""
+					Installments   interface{} "json:\"installments\""
+					ExpirationDate interface{} "json:\"expiration_date\""
+					StartDate      interface{} "json:\"start_date\""
+					Status         string      "json:\"status\""
+				}{Legals: interface{}(nil), Installments: interface{}(nil), ExpirationDate: interface{}(nil), StartDate: interface{}(nil), Status: "deactive"}, SiteID: "MCO", ProcessingMode: "aggregator"}},
 		},
 		{
 			name:       "successful response for visa bin",
@@ -1074,26 +897,29 @@ func TestClient_GetPaymentMethodsForBin(t *testing.T) {
 				}{Length: 3, CardLocation: "back", Mode: "mandatory"}}}, AdditionalInfoNeeded: []string{"cardholder_name", "cardholder_identification_number", "cardholder_identification_type"}, MinAllowedAmount: 0, MaxAllowedAmount: 0, AccreditationTime: 2880, FinancialInstitutions: []struct {
 					ID          string "json:\"id\""
 					Description string "json:\"description\""
-				}{}, ProcessingModes: []string(nil), PayerCosts: []struct {
-					InstallmentRate       int           "json:\"installment_rate\""
-					DiscountRate          int           "json:\"discount_rate\""
-					MinAllowedAmount      float64       "json:\"min_allowed_amount\""
-					Labels                []interface{} "json:\"labels\""
-					Installments          int           "json:\"installments\""
-					ReimbursementRate     interface{}   "json:\"reimbursement_rate\""
-					MaxAllowedAmount      float64       "json:\"max_allowed_amount\""
-					PaymentMethodOptionID string        "json:\"payment_method_option_id\""
-				}{{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 1, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 2, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 3, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 4, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 5, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 6, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 12, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 18, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 24, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{"recommended_installment"}, Installments: 36, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}}, Issuer: struct {
-					Default bool   "json:\"default\""
-					Name    string "json:\"name\""
-					ID      int    "json:\"id\""
-				}{Default: true, Name: "Visa", ID: 205}, TotalFinancialCost: interface{}(nil), MinAccreditationDays: 0, MaxAccreditationDays: 2, MerchantAccountID: interface{}(nil), Bins: []interface{}{}, Marketplace: "NONE", Agreements: []interface{}{}, Labels: []string{"recommended_method"}, FinancingDeals: struct {
-					Legals         interface{} "json:\"legals\""
-					Installments   interface{} "json:\"installments\""
-					ExpirationDate interface{} "json:\"expiration_date\""
-					StartDate      interface{} "json:\"start_date\""
-					Status         string      "json:\"status\""
-				}{Legals: interface{}(nil), Installments: interface{}(nil), ExpirationDate: interface{}(nil), StartDate: interface{}(nil), Status: "deactive"}, SiteID: "MCO", ProcessingMode: "aggregator"},
+				}{},
+					PayerCosts: mercadopago.PayerCosts{
+						{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 1, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+						{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 2, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+						{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 3, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+						{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 4, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+						{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 5, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+						{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 6, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+						{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 12, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+						{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 18, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+						{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{}, Installments: 24, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+						{InstallmentRate: 0, DiscountRate: 0, MinAllowedAmount: 1000, Labels: []interface{}{"recommended_installment"}, Installments: 36, ReimbursementRate: interface{}(nil), MaxAllowedAmount: 5e+07, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					}, Issuer: struct {
+						Default bool   "json:\"default\""
+						Name    string "json:\"name\""
+						ID      int    "json:\"id\""
+					}{Default: true, Name: "Visa", ID: 205}, TotalFinancialCost: interface{}(nil), MinAccreditationDays: 0, MaxAccreditationDays: 2, MerchantAccountID: interface{}(nil), Bins: []interface{}{}, Marketplace: "NONE", Agreements: []interface{}{}, Labels: []string{"recommended_method"}, FinancingDeals: struct {
+						Legals         interface{} "json:\"legals\""
+						Installments   interface{} "json:\"installments\""
+						ExpirationDate interface{} "json:\"expiration_date\""
+						StartDate      interface{} "json:\"start_date\""
+						Status         string      "json:\"status\""
+					}{Legals: interface{}(nil), Installments: interface{}(nil), ExpirationDate: interface{}(nil), StartDate: interface{}(nil), Status: "deactive"}, SiteID: "MCO", ProcessingMode: "aggregator"},
 			},
 		},
 	}
@@ -1146,20 +972,21 @@ func TestClient_GetInstallments(t *testing.T) {
 				Name            string "json:\"name\""
 				SecureThumbnail string "json:\"secure_thumbnail\""
 				Thumbnail       string "json:\"thumbnail\""
-			}{ID: "551", Name: "Bancolombia", SecureThumbnail: "https://www.mercadopago.com/org-img/MP3/API/logos/amex.gif", Thumbnail: "http://img.mlstatic.com/org-img/MP3/API/logos/amex.gif"}, ProcessingMode: "aggregator", MerchantAccountID: interface{}(nil), PayerCosts: []struct {
-				Installments             int           "json:\"installments\""
-				InstallmentRate          int           "json:\"installment_rate\""
-				DiscountRate             int           "json:\"discount_rate\""
-				ReimbursementRate        interface{}   "json:\"reimbursement_rate\""
-				Labels                   []interface{} "json:\"labels\""
-				InstallmentRateCollector []string      "json:\"installment_rate_collector\""
-				MinAllowedAmount         float64       "json:\"min_allowed_amount\""
-				MaxAllowedAmount         float64       "json:\"max_allowed_amount\""
-				RecommendedMessage       string        "json:\"recommended_message\""
-				InstallmentAmount        float64       "json:\"installment_amount\""
-				TotalAmount              float64       "json:\"total_amount\""
-				PaymentMethodOptionID    string        "json:\"payment_method_option_id\""
-			}{{Installments: 1, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"MERCADOPAGO"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "1 cuota de $ 2.000 ($ 2.000)", InstallmentAmount: 2000, TotalAmount: 2000, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {Installments: 2, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "2 cuotas de $ 1.000 ($ 2.000)", InstallmentAmount: 1000, TotalAmount: 2000, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {Installments: 3, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "3 cuotas de $ 667 ($ 2.000)", InstallmentAmount: 666.67, TotalAmount: 2000, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {Installments: 4, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "4 cuotas de $ 500 ($ 2.000)", InstallmentAmount: 500, TotalAmount: 2000, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {Installments: 5, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "5 cuotas de $ 400 ($ 2.000)", InstallmentAmount: 400, TotalAmount: 2000, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {Installments: 6, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "6 cuotas de $ 333 ($ 2.000)", InstallmentAmount: 333.33, TotalAmount: 2000, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {Installments: 12, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "12 cuotas de $ 167 ($ 2.000)", InstallmentAmount: 166.67, TotalAmount: 2000, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {Installments: 18, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "18 cuotas de $ 111 ($ 2.000)", InstallmentAmount: 111.11, TotalAmount: 2000, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {Installments: 24, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "24 cuotas de $ 83 ($ 2.000)", InstallmentAmount: 83.33, TotalAmount: 2000, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {Installments: 36, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{"recommended_installment"}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "36 cuotas de $ 56 ($ 2.000)", InstallmentAmount: 55.56, TotalAmount: 2000, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}}, Agreements: interface{}(nil)}},
+			}{ID: "551", Name: "Bancolombia", SecureThumbnail: "https://www.mercadopago.com/org-img/MP3/API/logos/amex.gif", Thumbnail: "http://img.mlstatic.com/org-img/MP3/API/logos/amex.gif"}, ProcessingMode: "aggregator", MerchantAccountID: interface{}(nil),
+				PayerCosts: mercadopago.PayerCosts{
+					{Installments: 1, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"MERCADOPAGO"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "1 cuota de $ 2.000 ($ 2.000)", InstallmentAmount: 2000, TotalAmount: 2000, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{Installments: 2, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "2 cuotas de $ 1.000 ($ 2.000)", InstallmentAmount: 1000, TotalAmount: 2000, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{Installments: 3, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "3 cuotas de $ 667 ($ 2.000)", InstallmentAmount: 666.67, TotalAmount: 2000, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{Installments: 4, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "4 cuotas de $ 500 ($ 2.000)", InstallmentAmount: 500, TotalAmount: 2000, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{Installments: 5, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "5 cuotas de $ 400 ($ 2.000)", InstallmentAmount: 400, TotalAmount: 2000, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{Installments: 6, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "6 cuotas de $ 333 ($ 2.000)", InstallmentAmount: 333.33, TotalAmount: 2000, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{Installments: 12, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "12 cuotas de $ 167 ($ 2.000)", InstallmentAmount: 166.67, TotalAmount: 2000, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{Installments: 18, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "18 cuotas de $ 111 ($ 2.000)", InstallmentAmount: 111.11, TotalAmount: 2000, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{Installments: 24, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "24 cuotas de $ 83 ($ 2.000)", InstallmentAmount: 83.33, TotalAmount: 2000, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{Installments: 36, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{"recommended_installment"}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "36 cuotas de $ 56 ($ 2.000)", InstallmentAmount: 55.56, TotalAmount: 2000, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+				},
+			},
+			},
 		},
 		{
 			name: "amount with cents",
@@ -1175,22 +1002,23 @@ func TestClient_GetInstallments(t *testing.T) {
 				Name            string "json:\"name\""
 				SecureThumbnail string "json:\"secure_thumbnail\""
 				Thumbnail       string "json:\"thumbnail\""
-			}{ID: "551", Name: "Bancolombia", SecureThumbnail: "https://www.mercadopago.com/org-img/MP3/API/logos/amex.gif", Thumbnail: "http://img.mlstatic.com/org-img/MP3/API/logos/amex.gif"}, ProcessingMode: "aggregator", MerchantAccountID: interface{}(nil), PayerCosts: []struct {
-				Installments             int           "json:\"installments\""
-				InstallmentRate          int           "json:\"installment_rate\""
-				DiscountRate             int           "json:\"discount_rate\""
-				ReimbursementRate        interface{}   "json:\"reimbursement_rate\""
-				Labels                   []interface{} "json:\"labels\""
-				InstallmentRateCollector []string      "json:\"installment_rate_collector\""
-				MinAllowedAmount         float64       "json:\"min_allowed_amount\""
-				MaxAllowedAmount         float64       "json:\"max_allowed_amount\""
-				RecommendedMessage       string        "json:\"recommended_message\""
-				InstallmentAmount        float64       "json:\"installment_amount\""
-				TotalAmount              float64       "json:\"total_amount\""
-				PaymentMethodOptionID    string        "json:\"payment_method_option_id\""
-			}{{Installments: 1, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"MERCADOPAGO"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "1 cuota de $ 2.000 ($ 2.000)", InstallmentAmount: 1234.56, TotalAmount: 1234.56, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {Installments: 2, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "2 cuotas de $ 1.000 ($ 2.000)", InstallmentAmount: 1000, TotalAmount: 1234.56, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {Installments: 3, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "3 cuotas de $ 667 ($ 2.000)", InstallmentAmount: 666.67, TotalAmount: 1234.56, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {Installments: 4, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "4 cuotas de $ 500 ($ 2.000)", InstallmentAmount: 500, TotalAmount: 1234.56, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {Installments: 5, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "5 cuotas de $ 400 ($ 2.000)", InstallmentAmount: 400, TotalAmount: 1234.56, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {Installments: 6, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "6 cuotas de $ 333 ($ 2.000)", InstallmentAmount: 333.33, TotalAmount: 1234.56, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {Installments: 12, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "12 cuotas de $ 167 ($ 2.000)", InstallmentAmount: 166.67, TotalAmount: 1234.56, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {Installments: 18, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "18 cuotas de $ 111 ($ 2.000)", InstallmentAmount: 111.11, TotalAmount: 1234.56, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {Installments: 24, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "24 cuotas de $ 83 ($ 2.000)", InstallmentAmount: 83.33, TotalAmount: 1234.56, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}, {Installments: 36, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{"recommended_installment"}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "36 cuotas de $ 56 ($ 2.000)", InstallmentAmount: 55.56, TotalAmount: 1234.56, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"}}, Agreements: interface{}(nil)}},
+			}{ID: "551", Name: "Bancolombia", SecureThumbnail: "https://www.mercadopago.com/org-img/MP3/API/logos/amex.gif", Thumbnail: "http://img.mlstatic.com/org-img/MP3/API/logos/amex.gif"}, ProcessingMode: "aggregator",
+				PayerCosts: mercadopago.PayerCosts{
+					{Installments: 1, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"MERCADOPAGO"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "1 cuota de $ 2.000 ($ 2.000)", InstallmentAmount: 1234.56, TotalAmount: 1234.56, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{Installments: 2, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "2 cuotas de $ 1.000 ($ 2.000)", InstallmentAmount: 1000, TotalAmount: 1234.56, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{Installments: 3, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "3 cuotas de $ 667 ($ 2.000)", InstallmentAmount: 666.67, TotalAmount: 1234.56, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{Installments: 4, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "4 cuotas de $ 500 ($ 2.000)", InstallmentAmount: 500, TotalAmount: 1234.56, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{Installments: 5, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "5 cuotas de $ 400 ($ 2.000)", InstallmentAmount: 400, TotalAmount: 1234.56, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{Installments: 6, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "6 cuotas de $ 333 ($ 2.000)", InstallmentAmount: 333.33, TotalAmount: 1234.56, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{Installments: 12, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "12 cuotas de $ 167 ($ 2.000)", InstallmentAmount: 166.67, TotalAmount: 1234.56, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{Installments: 18, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "18 cuotas de $ 111 ($ 2.000)", InstallmentAmount: 111.11, TotalAmount: 1234.56, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{Installments: 24, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "24 cuotas de $ 83 ($ 2.000)", InstallmentAmount: 83.33, TotalAmount: 1234.56, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+					{Installments: 36, InstallmentRate: 0, DiscountRate: 0, ReimbursementRate: interface{}(nil), Labels: []interface{}{"recommended_installment"}, InstallmentRateCollector: []string{"THIRD_PARTY"}, MinAllowedAmount: 1000, MaxAllowedAmount: 50000000, RecommendedMessage: "36 cuotas de $ 56 ($ 2.000)", InstallmentAmount: 55.56, TotalAmount: 1234.56, PaymentMethodOptionID: "1.AQokODllZjQyNjktYjAzMy00OWU1LWJhMWQtNDE0NjQyNTM3MzY4EJaFuevHLg"},
+				},
+				Agreements: interface{}(nil)}},
 		},
 	}
+
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			publicKey := "public-key"

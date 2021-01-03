@@ -37,3 +37,20 @@ type Card struct {
 	DateLastUpdated string      `json:"date_last_updated"`
 	Cardholder      Cardholder  `json:"cardholder"`
 }
+
+type PayerCosts []PayerCost
+
+type PayerCost struct {
+	InstallmentRate          int           `json:"installment_rate"`
+	DiscountRate             int           `json:"discount_rate"`
+	MinAllowedAmount         float64       `json:"min_allowed_amount"`
+	Labels                   []interface{} `json:"labels"`
+	Installments             int           `json:"installments"`
+	ReimbursementRate        interface{}   `json:"reimbursement_rate"`
+	MaxAllowedAmount         float64       `json:"max_allowed_amount"`
+	PaymentMethodOptionID    string        `json:"payment_method_option_id"`
+	InstallmentRateCollector []string      `json:"installment_rate_collector"`
+	RecommendedMessage       string        `json:"recommended_message"`
+	InstallmentAmount        float64       `json:"installment_amount"`
+	TotalAmount              float64       `json:"total_amount"`
+}
