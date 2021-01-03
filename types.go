@@ -10,12 +10,10 @@ type Payer struct {
 	Identification Identification `json:"identification"`
 	FirstName      string         `json:"first_name,omitempty"`
 	LastName       string         `json:"last_name,omitempty"`
-	Phone          Phone          `json:"phone,omitempty"`
+	Phone          *Phone         `json:"phone,omitempty"`
 	Type           string         `json:"type,omitempty"`
 	EntityType     interface{}    `json:"entity_type,omitempty"`
 	ID             interface{}    `json:"id,omitempty"`
-	// ,"first_name":"","last_name":"","phone":{"area_code":"","number":"","extension":""},"type":"","entity_type":null,"id":null}
-	// ,"phone":{"area_code":"","number":"","extension":""}}
 }
 
 type Cardholder struct {

@@ -14,7 +14,7 @@ type PaymentParams struct {
 	Token               string      `json:"token"`
 	Description         string      `json:"description"`
 	Installments        int         `json:"installments"`
-	NotificationURL     string      `json:"notification_url"`
+	NotificationURL     string      `json:"notification_url,omitempty"`
 	SponsorID           interface{} `json:"sponsor_id"`
 	BinaryMode          bool        `json:"binary_mode"`
 	ExternalReference   string      `json:"external_reference"`
