@@ -73,5 +73,13 @@ func (c *client) requestAndDecode(req *http.Request, response interface{}) error
 		return err
 	}
 
+	// convert cause's code from float to int
+	for i, cause := range errResp.Cause {
+		if code, ok := cause.Code.(float64); ok {
+			cause.Code = int(code)
+			errResp.Cause[i] = cause
+		}
+	}
+
 	return errResp
 }

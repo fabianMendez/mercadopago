@@ -40,7 +40,21 @@ func TestClient_requestAndDecode(t *testing.T) {
 				},
 			},
 		},
+		{
+			name:       "notificaction_url attribute must be url valid",
+			respStatus: http.StatusBadRequest,
+			respBody:   `{"message":"notificaction_url attribute must be url valid","error":"bad_request","status":400,"cause":[{"code":4020,"description":"notificaction_url attribute must be url valid","data":null}]}`,
+			expectedErr: Error{
+				Message:   "notificaction_url attribute must be url valid",
+				Status:    400,
+				ErrorCode: "bad_request",
+				Cause: []ErrorCause{
+					{Code: 4020, Description: `notificaction_url attribute must be url valid`},
+				},
+			},
+		},
 	}
+
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
