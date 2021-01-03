@@ -7,6 +7,27 @@ import (
 	"net/http"
 )
 
+const (
+	// The user has not yet completed the payment process.
+	StatusPending = "pending"
+	// The payment has been approved and accredited.
+	StatusApproved = "approved"
+	// The payment has been authorized but not captured yet.
+	StatusAuthorized = "authorized"
+	// Payment is being reviewed.
+	StatusInProcess = "in_process"
+	// Users have initiated a dispute.
+	StatusInMediation = "in_mediation"
+	// Payment was rejected. The user may retry payment.
+	StatusRejected = "rejected"
+	// Payment was cancelled by one of the parties or because time for payment has expired
+	StatusCancelled = "cancelled"
+	// Payment was refunded to the user.
+	StatusRefunded = "refunded"
+	// Was made a chargeback in the buyer’s credit card.
+	StatusChargedBack = "charged_back"
+)
+
 type PaymentParams struct {
 	TransactionAmount   float64     `json:"transaction_amount"`
 	PaymentMethodID     string      `json:"payment_method_id"`
