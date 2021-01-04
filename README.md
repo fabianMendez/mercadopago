@@ -22,14 +22,14 @@ func main() {
 		panic(err)
 	}
 
-	identification := mercadopago.Identification{Type:   "CC", Number: "19119119100"}
+	identification := mercadopago.Identification{Type: "CC", Number: "19119119100"}
 
 	cardToken, err := client.NewCardToken(mercadopago.CardTokenParams{
 		ExpirationMonth: 11,
 		ExpirationYear:  2025,
-		Cardholder: mercadopago.Cardholder{Name: "APRO", Identification: identification},
-		SecurityCode: "123",
-		CardNumber:   "4013540682746260",
+		Cardholder:      mercadopago.Cardholder{Name: "APRO", Identification: identification},
+		SecurityCode:    "123",
+		CardNumber:      "4013540682746260",
 	})
 	if err != nil {
 		panic(err)
